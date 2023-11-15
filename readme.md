@@ -141,3 +141,17 @@ if you don't know available filename; you can check list of files using
 - paste the lines you copied  using ***crtl + insert*** or ***crtl + shift + v***
 
 once all this is done you can pull your project from github into your instance server root (/var/www/html)
+
+
+#### Laravel Permission Command
+
+```
+sudo chmod 777 -R /var/www/html
+
+sudo chown -R www-data storage
+sudo chown -R www-data storage/framework
+sudo chmod g+w -R storage
+sudo chmod g+w -R storage/framework
+sudo chmod g+w -R storage/framework/sessions/
+sudo chmod g+w -R storage/logs/
+```
